@@ -30,7 +30,7 @@ import {
   V2QuoteProvider,
   V3PoolProvider,
   IRouteCachingProvider,
-} from '@uniswap/smart-order-router'
+} from '@planq-fi/smart-order-router'
 import { TokenList } from '@uniswap/token-lists'
 import { default as bunyan, default as Logger } from 'bunyan'
 import { ethers } from 'ethers'
@@ -60,6 +60,7 @@ export const SUPPORTED_CHAINS: ChainId[] = [
   ChainId.CELO_ALFAJORES,
   ChainId.BNB,
   ChainId.AVALANCHE,
+  ChainId.PLANQ,
 ]
 const DEFAULT_TOKEN_LIST = 'https://gateway.ipfs.io/ipns/tokens.uniswap.org'
 
