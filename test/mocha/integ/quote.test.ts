@@ -14,12 +14,12 @@ import {
   USDC_MAINNET,
   USDT_MAINNET,
   WBTC_MAINNET,
-} from '@planq-fi/smart-order-router'
+} from '@uniswap/smart-order-router'
 import {
   PERMIT2_ADDRESS,
   UNIVERSAL_ROUTER_ADDRESS as UNIVERSAL_ROUTER_ADDRESS_BY_CHAIN,
 } from '@uniswap/universal-router-sdk'
-import { MethodParameters } from '@planq-fi/smart-order-router'
+import { MethodParameters } from '@uniswap/smart-order-router'
 import { fail } from 'assert'
 import axiosStatic, { AxiosResponse } from 'axios'
 import axiosRetry from 'axios-retry'
@@ -1902,6 +1902,7 @@ describe('quote', function () {
     [ChainId.ARBITRUM_GOERLI]: null,
     [ChainId.BNB]: USDC_ON(ChainId.BNB),
     [ChainId.AVALANCHE]: USDC_ON(ChainId.AVALANCHE),
+    [ChainId.PLANQ]: null,
   }
 
   const TEST_ERC20_2: { [chainId in ChainId]: Token | null } = {
@@ -1920,6 +1921,7 @@ describe('quote', function () {
     [ChainId.ARBITRUM_GOERLI]: null,
     [ChainId.BNB]: USDT_ON(ChainId.BNB),
     [ChainId.AVALANCHE]: DAI_ON(ChainId.AVALANCHE),
+    [ChainId.PLANQ]: null,
   }
 
   // TODO: Find valid pools/tokens on optimistic kovan and polygon mumbai. We skip those tests for now.

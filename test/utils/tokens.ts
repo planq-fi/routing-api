@@ -30,7 +30,7 @@ import {
   USDT_MAINNET,
   USDT_OPTIMISM,
   WRAPPED_NATIVE_CURRENCY,
-} from '@planq-fi/smart-order-router'
+} from '@uniswap/smart-order-router'
 import { ethers } from 'ethers'
 import NodeCache from 'node-cache'
 

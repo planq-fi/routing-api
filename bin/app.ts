@@ -1,9 +1,7 @@
 import { ChainId } from '@uniswap/sdk-core'
 import * as cdk from 'aws-cdk-lib'
 import { CfnOutput, SecretValue, Stack, StackProps, Stage, StageProps } from 'aws-cdk-lib'
-import * as chatbot from 'aws-cdk-lib/aws-chatbot'
 import { BuildEnvironmentVariableType } from 'aws-cdk-lib/aws-codebuild'
-import { PipelineNotificationEvents } from 'aws-cdk-lib/aws-codepipeline'
 import * as sm from 'aws-cdk-lib/aws-secretsmanager'
 import { CodeBuildStep, CodePipeline, CodePipelineSource } from 'aws-cdk-lib/pipelines'
 import { Construct } from 'constructs'
@@ -76,7 +74,7 @@ export class RoutingAPIPipeline extends Stack {
   constructor(scope: Construct, id: string, props?: StackProps) {
     super(scope, id, props)
 
-    const code = CodePipelineSource.gitHub('Uniswap/routing-api', 'main', {
+    const code = CodePipelineSource.gitHub('planq-fi/routing-api', 'main', {
       authentication: SecretValue.secretsManager('github-token-2'),
     })
 
@@ -201,16 +199,9 @@ export class RoutingAPIPipeline extends Stack {
 
     this.addIntegTests(code, prodUsEast2Stage, prodUsEast2AppStage)
 
-    const slackChannel = chatbot.SlackChannelConfiguration.fromSlackChannelConfigurationArn(
-      this,
-      'SlackChannel',
-      'arn:aws:chatbot::644039819003:chat-configuration/slack-channel/eng-ops-slack-chatbot'
-    )
+
 
     pipeline.buildPipeline()
-    pipeline.pipeline.notifyOn('NotifySlack', slackChannel, {
-      events: [PipelineNotificationEvents.PIPELINE_EXECUTION_FAILED],
-    })
   }
 
   private addIntegTests(
@@ -270,6 +261,7 @@ const jsonRpcProviders = {
   WEB3_RPC_44787: process.env.JSON_RPC_PROVIDER_44787!,
   WEB3_RPC_56: process.env.JSON_RPC_PROVIDER_56!,
   WEB3_RPC_43114: process.env.JSON_RPC_PROVIDER_43114!,
+  WEB3_RPC_7070: process.env.JSON_RPC_PROVIDER_7070!,
 }
 
 // Local dev stack
