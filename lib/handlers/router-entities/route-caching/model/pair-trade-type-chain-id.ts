@@ -1,5 +1,5 @@
-import { ChainId, TradeType } from '@uniswap/sdk-core'
-import { CachedRoutes } from '@uniswap/smart-order-router'
+import { ChainId, TradeType } from '@planq-fi/sdk-core'
+import { CachedRoutes } from '@planq-fi/smart-order-router'
 
 interface PairTradeTypeChainIdArgs {
   tokenIn: string

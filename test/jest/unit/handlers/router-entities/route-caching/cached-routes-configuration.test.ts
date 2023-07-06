@@ -1,4 +1,4 @@
-import { ChainId, CurrencyAmount, Token, TradeType } from '@uniswap/sdk-core'
+import { ChainId, CurrencyAmount, Token, TradeType } from '@planq-fi/sdk-core'
 import { describe, it, expect } from '@jest/globals'
 import {
   CACHED_ROUTES_CONFIGURATION,

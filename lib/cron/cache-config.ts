@@ -1,6 +1,6 @@
 import { Protocol } from '@uniswap/router-sdk'
-import { V2SubgraphProvider, V3SubgraphProvider } from '@uniswap/smart-order-router'
-import { ChainId } from '@uniswap/sdk-core'
+import { V2SubgraphProvider, V3SubgraphProvider } from '@planq-fi/smart-order-router'
+import { ChainId } from '@planq-fi/sdk-core'
 
 export const chainProtocols = [
   // V3.

@@ -1,6 +1,6 @@
 import { SignerWithAddress } from '@nomiclabs/hardhat-ethers/signers'
 import { AllowanceTransfer, PermitSingle } from '@uniswap/permit2-sdk'
-import { ChainId, Currency, CurrencyAmount, Ether, Fraction, Token, WETH9 } from '@uniswap/sdk-core'
+import { ChainId, Currency, CurrencyAmount, Ether, Fraction, Token, WETH9 } from '@planq-fi/sdk-core'
 import {
   CEUR_CELO,
   CEUR_CELO_ALFAJORES,
@@ -14,12 +14,12 @@ import {
   USDC_MAINNET,
   USDT_MAINNET,
   WBTC_MAINNET,
-} from '@uniswap/smart-order-router'
+} from '@planq-fi/smart-order-router'
 import {
   PERMIT2_ADDRESS,
   UNIVERSAL_ROUTER_ADDRESS as UNIVERSAL_ROUTER_ADDRESS_BY_CHAIN,
 } from '@uniswap/universal-router-sdk'
-import { MethodParameters } from '@uniswap/smart-order-router'
+import { MethodParameters } from '@planq-fi/smart-order-router'
 import { fail } from 'assert'
 import axiosStatic, { AxiosResponse } from 'axios'
 import axiosRetry from 'axios-retry'

@@ -1,7 +1,7 @@
-import { IV3PoolProvider, log, metric, MetricLoggerUnit, V3PoolAccessor } from '@uniswap/smart-order-router'
-import { Token } from '@uniswap/sdk-core'
-import { FeeAmount, Pool } from '@uniswap/v3-sdk'
-import { ProviderConfig } from '@uniswap/smart-order-router/build/main/providers/provider'
+import { IV3PoolProvider, log, metric, MetricLoggerUnit, V3PoolAccessor } from '@planq-fi/smart-order-router'
+import { Token } from '@planq-fi/sdk-core'
+import { FeeAmount, Pool } from '@planq-fi/v3-sdk'
+import { ProviderConfig } from '@planq-fi/smart-order-router/build/main/providers/provider'
 import { POOL_PROVIDER_TRAFFIC_SWITCH_CONFIGURATION } from '../../util/pool-provider-traffic-switch-configuration'
 import JSBI from 'jsbi'
 

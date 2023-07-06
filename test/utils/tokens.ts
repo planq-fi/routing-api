@@ -1,5 +1,5 @@
 import DEFAULT_TOKEN_LIST from '@uniswap/default-token-list'
-import { ChainId, Token } from '@uniswap/sdk-core'
+import { ChainId, Token } from '@planq-fi/sdk-core'
 import {
   CachingTokenListProvider,
   DAI_ARBITRUM,
@@ -30,7 +30,7 @@ import {
   USDT_MAINNET,
   USDT_OPTIMISM,
   WRAPPED_NATIVE_CURRENCY,
-} from '@uniswap/smart-order-router'
+} from '@planq-fi/smart-order-router'
 import { ethers } from 'ethers'
 import NodeCache from 'node-cache'
 

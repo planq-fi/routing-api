@@ -1,4 +1,4 @@
-import { Token } from '@uniswap/sdk-core'
+import { Token } from '@planq-fi/sdk-core'
 
 export interface MarshalledToken {
   chainId: number

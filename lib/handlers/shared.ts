@@ -1,4 +1,4 @@
-import { ChainId, Currency, Percent } from '@uniswap/sdk-core'
+import { ChainId, Currency, Percent } from '@planq-fi/sdk-core'
 import {
   AlphaRouterConfig,
   ITokenListProvider,
@@ -6,7 +6,7 @@ import {
   MapWithLowerCaseKey,
   NATIVE_NAMES_BY_ID,
   nativeOnChain,
-} from '@uniswap/smart-order-router'
+} from '@planq-fi/smart-order-router'
 import Logger from 'bunyan'
 
 export const DEFAULT_ROUTING_CONFIG_BY_CHAIN = (chainId: ChainId): AlphaRouterConfig => {
